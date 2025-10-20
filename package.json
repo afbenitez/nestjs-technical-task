@@ -1,0 +1,37 @@
+{
+  "name": "nestjs-technical-test",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test-producer": "dotenv -e apps/event-tracker/.env -- tsx ./test-producer.ts",
+    "build": "cd apps/event-tracker && npm run build",
+    "dev": "cd apps/event-tracker && npm run dev",
+    "start": "cd apps/event-tracker && npm run start",
+    "start:prod": "cd apps/event-tracker && npm run start:prod",
+    "test": "cd apps/event-tracker && npm run test",
+    "test:watch": "cd apps/event-tracker && npm run test:watch",
+    "test:cov": "cd apps/event-tracker && npm run test:cov",
+    "test:e2e": "cd apps/event-tracker && npm run test:e2e",
+    "format": "prettier --write \"apps/**/*.ts\"",
+    "lint": "eslint \"apps/**/*.ts\" --fix"
+  },
+  "private": true,
+  "dependencies": {
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/microservices": "^11.1.6",
+    "@nestjs/mongoose": "^11.0.3",
+    "@nestjs/testing": "^11.1.6",
+    "dotenv": "^17.2.3",
+    "kafkajs": "2.2.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "22.13.1",
+    "dotenv-cli": "^10.0.0",
+    "prettier": "^3.2.5",
+    "tslib": "2.8.1",
+    "tsx": "4.19.3",
+    "typescript": "5.8.2"
+  }
+}
